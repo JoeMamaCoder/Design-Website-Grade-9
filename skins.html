@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mortis: The Website</title>
+        <link rel="stylesheet" href="skins.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a href="mortismain.html">
+        <h1 class="title">Mortis</h1>
+          </a>
+          <h1 class="title2">The Best Assassin Brawler</h1>
+          <div class="table">
+            <table>
+            <tr>
+                <td>Skins</td>
+                <td>Rarity</td>
+                <td>Cost</td>
+                <td>Image</td>
+            </tr>
+            <tr>
+                <td>Top Hat Mortis</td>
+                <td>N/A</td>
+                <td>0 Bling/ 0 Gems</td>
+                <td><img id="image1" src="Mortis_Skin-Top_Hat.webp"></td>
+            </tr>
+            <tr>
+                <td>Mecha Mortis Basic</td>
+                <td>Legendary</td>
+                <td>Not Avalible for Bling/ 299 Gems</td>
+                <td><img id="image3" src="213wcxpvz7p91.webp"></td>
+            </tr>
+          </table>
+        </div>
+          <div id="mainContainer">
+            <div id="topContainer" class="image">---
+            </div>
+            <div id="bottomContainer">
+            </div>
+          </div>
+          <button class="toggle-btn" id="toggleButton">☰ Open Sidebar</button>
+          <div class="sidebar" id="sidebar">
+              <ul>
+                  <li><a href="mortismain.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>    
+                  <li><a href="abilities.html">Abilities</a></li>
+                  <li><a href="skins.html">Cosmetics</a></li>
+                  <li><a href="contacts.html">Contacts</a></li>
+              </ul>
+          </div>
+          <div class="overlay" id="overlay"></div>
+          <script>
+            const toggleButton = document.getElementById('toggleButton');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+    
+            toggleButton.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('active');
+                toggleButton.textContent = sidebar.classList.contains('open') ? '✖ Close Sidebar' : '☰ Open Sidebar';
+            });
+    
+            overlay.addEventListener('click', () => {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('active');
+                toggleButton.textContent = '☰ Open Sidebar';
+            });
+        </script>
+    </body>
+</html>

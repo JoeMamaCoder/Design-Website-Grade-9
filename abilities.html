@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mortis: The Website</title>
+        <link rel="stylesheet" href="abilities.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a href="mortismain.html">
+        <h1 class="title">Mortis</h1>
+          </a>
+          <h1 class="title2">The Best Assassin Brawler</h1>
+          <p class="dummy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus accusamus exercitationem tempore repudiandae nobis distinctio aliquam! At velit repudiandae consequuntur soluta placeat qui non impedit, a in, id laudantium officia.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem esse voluptate nihil sequi, quod exercitationem accusantium maxime corporis, animi ut est ipsa expedita vitae hic fuga laboriosam soluta libero numquam.
+          </p>
+          <p class="dummy2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde facilis, odio soluta recusandae vero distinctio veniam laudantium voluptas voluptates repellat! Amet officia rem inventore a placeat illo molestias temporibus ab? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere placeat porro animi nemo accusamus, omnis mollitia! Est incidunt ipsa ab, quae laudantium dolores, totam nihil rerum beatae quaerat quasil Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste natus ea asperiores, aliquid perspiciatis aspernatur delectus provident maxime velit eos totam accusamus, earum quidem eligendi nesciunt cumque voluptatem animi quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quasi fuga, unde at a facere, et illum vero rem soluta inventore tempora beatae asperiores culpa eaque autem iure doloremque neque?
+          </p>
+          <p class="dummy3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo natus modi id earum, facere asperiores eveniet esse deleniti dolor nostrum beatae, repellat laudantium dolorem incidunt expedita neque iusto, et autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Non libero, dolorem at voluptatibus voluptatum similique ipsum expedita laboriosam pariatur repellat officia fugit molestias excepturi, quod quia eius dolor temporibus voluptatem.</p>
+          <a href="test.html" target=”blank”>
+            <p class="question">Very Important Question, Click On Me!!!</p>
+          </a>
+          <div id="mainContainer">
+            <div id="topContainer" class="image">
+            </div>
+            <div id="bottomContainer">
+            </div>
+          </div>
+          <button class="toggle-btn" id="toggleButton">☰ Open Sidebar</button>
+          <div class="sidebar" id="sidebar">
+              <ul>
+                  <li><a href="mortismain.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>    
+                  <li><a href="abilities.html">Abilities</a></li>
+                  <li><a href="skins.html">Cosmetics</a></li>
+                  <li><a href="contacts.html">Contacts</a></li>
+              </ul>
+          </div>
+          <div class="overlay" id="overlay"></div>
+          <script>
+            const toggleButton = document.getElementById('toggleButton');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+    
+            toggleButton.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('active');
+                toggleButton.textContent = sidebar.classList.contains('open') ? '✖ Close Sidebar' : '☰ Open Sidebar';
+            });
+    
+            overlay.addEventListener('click', () => {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('active');
+                toggleButton.textContent = '☰ Open Sidebar';
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <title>Question and Answer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        #answer, #feedback {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1em;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ddd;
+        }
+        .answer {
+            font-family: "Lilita One", sans-serif;
+            font-size: 200%;
+            color: #2c2d3d;
+        }
+    </style>
+</head>
+<body>
+
+    <p class="answer">Question: Who is the Best Brawler</p>
+
+    <!-- Input field for user to enter their answer -->
+    <div class="container">
+        <input type="text" id="userAnswer" placeholder="Enter your answer (e.g., Emz)">
+    </div>
+
+    <!-- Buttons to reveal the answer or submit the user's answer -->
+    <div class="container">
+        <button id="submitAnswer">Submit Answer</button>
+        <button id="checkAnswer">Check Answer</button>
+        <button id="revealAnswer">Reveal Correct Answer</button>
+    </div>
+
+    <!-- Area to display feedback and answer -->
+    <p id="answer"></p>
+    <p id="feedback"></p>
+
+    <script>
+        // Correct answer as a word
+        const correctAnswer = "mortis";
+
+        // Elements
+        const userAnswerInput = document.getElementById("userAnswer");
+        const submitButton = document.getElementById("submitAnswer");
+        const checkButton = document.getElementById("checkAnswer");
+        const revealButton = document.getElementById("revealAnswer");
+        const answerParagraph = document.getElementById("answer");
+        const feedbackParagraph = document.getElementById("feedback");
+
+        // Function to reveal the correct answer
+        revealButton.addEventListener("click", function() {
+            answerParagraph.innerText = "The correct answer is 'mortis'.";
+            feedbackParagraph.innerText = "";
+        });
+
+        // Function to handle the user's answer submission
+        submitButton.addEventListener("click", function() {
+            const userAnswer = userAnswerInput.value.trim().toLowerCase();
+
+            if (userAnswer === "") {
+                feedbackParagraph.innerText = "Please enter an answer!";
+                feedbackParagraph.style.color = "red";
+            } else {
+                feedbackParagraph.innerText = `You entered: ${userAnswer}`;
+                feedbackParagraph.style.color = "green";
+            }
+        });
+
+        // Function to check if the user's answer is correct
+        checkButton.addEventListener("click", function() {
+            const userAnswer = userAnswerInput.value.trim().toLowerCase();
+
+            if (userAnswer === "") {
+                feedbackParagraph.innerText = "Please enter an answer to check!";
+                feedbackParagraph.style.color = "red";
+            } else {
+                if (userAnswer === correctAnswer) {
+                    feedbackParagraph.innerText = "Correct! Well done!";
+                    feedbackParagraph.style.color = "green";
+                } else {
+                    feedbackParagraph.innerText = "Incorrect. Try again!";
+                    feedbackParagraph.style.color = "red";
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mortis: The Website</title>
+        <link rel="stylesheet" href="stylesabout.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a href="mortismain.html">
+        <h1 class="title">Mortis</h1>
+          </a>
+        <p class="info">"Mortis had grand designs built around</p>
+        <p class="info2">being a mortician and a vampire, but</p>
+        <p class="info3"> the fact that nobody is dying at Starr</p>
+        <p class="info4">Park has put a huge damper on his plans."</p>
+          <h1 class="title2">The Best Assassin Brawler</h1>
+          <img src="Mortis_Portrait.webp" id="image2">
+        <p class="info5">Mortis is a</p><p class="mythic">Mythic</p><p class="info6">Brawler who has moderately high health</p>
+        <p class="info7"> and great mobility with his attack and a very fast mouvement</p>
+        <p class="info8">speed at the expense of a low damage output and a very slow</p>
+        <p class="info9">reload speed. He attacks by swinging his shovel and dashing a</p>
+        <p class="info10">a few tiles forward, dealing damage to enemies in his path.</p>
+        <p class="info11">When not attacking, a bar will charge over a few seconds, and</p>
+        <p class="info12">a charged bar increases his next attack's range. His Super</p>
+        <p class="info13">summons a swarm of bats that damage enemies and heal Mortis.</p>
+        <p class="info14">His first Gadget, Combo Spinner, instantly spins his shovel</p>
+        <p class="info15">around him, dealing damage to nearby enemies. His second Gadget,</p>
+        <p class="info16">Survival Shovel, doubles his reload speed momentarily. His</p>
+        <p class="info17">Mythic Gear, Bat Storm, increases his Super's projectile speed.</p>
+        <p class="info18">His first Star Power, Creepy Harvest, heals him whenever he</p>
+        <p class="info19">defeats an enemy Brawler. His second Star Power, Coiled Snake,</p>
+        <p class="info20">reduces the time needed to charge his attack bar. His Hypercharge,</p>
+        <p class="info21">Blood Boomerang, makes Mortis' Super return back to him, dealing</p>
+        <p class="info22">a second wave of damage and healing.</p>
+          <div id="mainContainer">
+            <div id="topContainer" class="image">
+            </div>
+            <div id="bottomContainer">
+            </div>
+          </div>
+          <button class="toggle-btn" id="toggleButton">☰ Open Sidebar</button>
+          <div class="sidebar" id="sidebar">
+              <ul>
+                  <li><a href="mortismain.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>    
+                  <li><a href="abilities.html">Abilities</a></li>
+                  <li><a href="skins.html">Cosmetics</a></li>
+                  <li><a href="contacts.html">Contacts</a></li>
+              </ul>
+          </div>
+          <div class="overlay" id="overlay"></div>
+          <script>
+            const toggleButton = document.getElementById('toggleButton');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+    
+            toggleButton.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('active');
+                toggleButton.textContent = sidebar.classList.contains('open') ? '✖ Close Sidebar' : '☰ Open Sidebar';
+            });
+    
+            overlay.addEventListener('click', () => {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('active');
+                toggleButton.textContent = '☰ Open Sidebar';
+            });
+        </script>
+    </body>
+</html>

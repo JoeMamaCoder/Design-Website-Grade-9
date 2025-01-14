@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mortis: The Website</title>
+        <link rel="stylesheet" href="contacts.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a href="mortismain.html">
+        <h1 class="title">Mortis</h1>
+          </a>
+          <h1 class="title2">The Best Assassin Brawler</h1>
+          <p class="contact">Social Media Contacts:</p>
+          <a href="https://skibiditoilet.shop/collections/all" target="_blank">
+            <p class="contact1"><u>Instagram.com</u></p>
+        </a>
+        <a href="https://www.amazon.ca/How-Be-Racist-David-Throwater/dp/B0D17GTGP5/ref=sr_1_1?crid=2RF0FCIWAYRJ0&dib=eyJ2IjoiMSJ9.oyD2bBlx1eyZ_bBWPf7uSu5J13IA1k9jI45aHaCarSrVKFdnH3-aRp9nvOh5V-7sBzKQ8xUu-BID2esYOODbvCVF9kGHoQPSUWbnS1AucEbtxmRXhGP6w3lay15SAYPqEwFVKAjRIOTe61FavYqOG2TUGjxpHFAhgqd4gqVTpg8M5oJLbFU4rR8rac5WqhjkJSkFfKPaS5slQeFo0FpvGnV2lJpwPFisQgm3qsBdsQfuz3uBqAWw0OX08e4I7-4lOZ3jSWWM-GL9yFhoCgMDxH-9f6-85G20n1rgV6idHQubtgoSfSMhCP_Je_7yEik2DOETqelXuLTRdP4lqigt8mfRIFxrVFMrd-NpfiCvNjiwFukr7_hRhiyLegTc0zFHe1pT-WDB9mVEGHb35n5eJe9DD7rAAM3GZC9nNG_a0Zc8xIckzjDNG865yYDoXvKM.XqlrVWobahxR-BSQO9bZGdvq_zwe76ZBtA5I_5GAYX4&dib_tag=se&keywords=How+to+be+racist&qid=1736880871&sprefix=how+to+be+racist%2Caps%2C119&sr=8-1" target="_blank">
+            <p class="contact2"><u>Facebook.com</u></p>
+        </a>
+        <a href="https://poki.com/en/g/love-finder-profile" target="_blank">
+            <p class="contact3"><u>Tinder.com</u></p>
+        </a>
+        <a href="https://www.google.com/search?q=Mewing+minion&newwindow=1&sca_esv=3ec098e3b7112be9&udm=2&biw=1920&bih=911&sxsrf=ADLYWIJGruoPo_V--JYrmz8yYlvVutPjLA%3A1736880448895&ei=QLGGZ-WpNryu5NoP54L9oA8&ved=0ahUKEwjlybHx7_WKAxU8F1kFHWdBH_QQ4dUDCBE&uact=5&oq=Mewing+minion&gs_lp=EgNpbWciDU1ld2luZyBtaW5pb24yBRAAGIAEMgQQABgeMgYQABgIGB4yBhAAGAgYHjIGEAAYCBgeMgYQABgIGB4yBhAAGAgYHjIGEAAYCBgeSNwKUK8EWPwGcAF4AJABAJgBZqAB5wGqAQMyLjG4AQPIAQD4AQGYAgSgAoACwgIKEAAYgAQYQxiKBcICBxAAGIAEGArCAgYQABgHGB7CAggQABgHGAgYHpgDAIgGAZIHAzMuMaAHzA4&sclient=img#vhid=I-EIp4lARiDlJM&vssid=mosaic" target="_blank">
+            <p class="contact4"><u>Grindr.com</u></p>
+        </a>
+        <a href="https://www.wikihow.com/Make-Your-Hair-Grow-Faster" target="_blank">
+            <p class="contact5"><u>Gmail.com</u></p>
+        </a>
+          <div id="mainContainer">
+            <div id="topContainer" class="image">
+            </div>
+            <div id="bottomContainer">
+            </div>
+          </div>
+          <button class="toggle-btn" id="toggleButton">☰ Open Sidebar</button>
+          <div class="sidebar" id="sidebar">
+              <ul>
+                  <li><a href="mortismain.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>    
+                  <li><a href="abilities.html">Abilities</a></li>
+                  <li><a href="skins.html">Cosmetics</a></li>
+                  <li><a href="contacts.html">Contacts</a></li>
+              </ul>
+          </div>
+          <div class="overlay" id="overlay"></div>
+          <script>
+            const toggleButton = document.getElementById('toggleButton');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+    
+            toggleButton.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('active');
+                toggleButton.textContent = sidebar.classList.contains('open') ? '✖ Close Sidebar' : '☰ Open Sidebar';
+            });
+    
+            overlay.addEventListener('click', () => {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('active');
+                toggleButton.textContent = '☰ Open Sidebar';
+            });
+        </script>
+    </body>
+</html>
